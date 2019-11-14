@@ -9,6 +9,8 @@ coverage:
       integration:
         flags: integration
         target: 1
+    patch:
+      target: 99
 parsers:
   javascript:
     enable_partials: yes
