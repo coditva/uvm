@@ -5,7 +5,6 @@ coverage:
   status:
     project:
       default:
-        target: auto
-        threshold: 80%
+        target: 100
 comment:
   behavior: spammy
