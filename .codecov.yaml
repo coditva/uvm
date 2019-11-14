@@ -6,5 +6,12 @@ coverage:
     project:
       default:
         target: 100
+flags:
+  projectA:  
+    paths:
+      - lib/uvm
+  projectB:
+    paths:
+      - lib/
 comment:
   behavior: spammy
