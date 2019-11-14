@@ -3,9 +3,12 @@ parsers:
     enable_partials: yes
 coverage:
   status:
+    unit:
+      flags: unit
+      target: 90
     project:
       default:
-        target: 100
+        target: auto
       unit:
         flags: unit
         target: 80
