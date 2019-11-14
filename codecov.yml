@@ -1,0 +1,13 @@
+parsers:
+  javascript:
+    enable_partials: yes
+coverage:
+  status:
+    project:
+      default:
+        target: 100
+      unit:
+        flags: unit
+        target: 80
+      integration:
+        flags: integration
