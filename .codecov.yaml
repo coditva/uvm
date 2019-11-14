@@ -11,8 +11,12 @@ coverage:
       projectB:
         target: 50%
         flags: projectB
+      unit:
+        flags: unit
+      integration:
+        flags: integration
 flags:
-  projectA:  
+  projectA:
     paths:
       - lib/uvm
   projectB:
