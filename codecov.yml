@@ -1,11 +1,5 @@
-parsers:
-  javascript:
-    enable_partials: yes
 coverage:
   status:
-    unit:
-      flags: unit
-      target: 90
     project:
       default:
         target: auto
@@ -14,3 +8,7 @@ coverage:
         target: 80
       integration:
         flags: integration
+        target: 1
+parsers:
+  javascript:
+    enable_partials: yes
