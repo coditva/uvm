@@ -6,6 +6,11 @@ coverage:
     project:
       default:
         target: 100
+      projectA:
+        flags: projectA
+      projectB:
+        target: 50%
+        flags: projectB
 flags:
   projectA:  
     paths:
