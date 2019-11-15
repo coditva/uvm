@@ -20,7 +20,6 @@ jobs:
         # calculate and upload coverage with tag "unit"
         - npm run test-unit
         - bash <(curl -s https://codecov.io/bash) \
-          -y codecov.yml \
           -c \
           -X gcov \
           -Z \
@@ -30,7 +29,6 @@ jobs:
         # calculate and upload coverage with tag "integration"
         - npm run test-integration
         - bash <(curl -s https://codecov.io/bash) \
-          -y codecov.yml \
           -c \
           -X gcov \
           -Z \
