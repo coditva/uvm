@@ -16,7 +16,7 @@ jobs:
       script:
         # calculate and upload coverage with tag "unit"
         - npm run test-unit
-        - codecov --clear --yml codecov.yml --file .coverage/coverage-final.json --flags unit
+        - bash <(curl -s https://codecov.io/bash) --clear --yml codecov.yml --file .coverage/coverage-final.json --flags unit
 
         # calculate and upload coverage with tag "integration"
         - npm run test-integration
