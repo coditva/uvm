@@ -14,6 +14,9 @@ jobs:
       node_js: stable
       os: linux
       script:
+        # check codecov configuration file
+        - curl --data-binary @codecov.yml https://codecov.io/validate
+
         # calculate and upload coverage with tag "unit"
         - npm run test-unit
         - bash <(curl -s https://codecov.io/bash) \
