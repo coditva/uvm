@@ -16,11 +16,21 @@ jobs:
       script:
         # calculate and upload coverage with tag "unit"
         - npm run test-unit
-        - bash <(curl -s https://codecov.io/bash) --clear --yml codecov.yml --file .coverage/coverage-final.json --flags unit
+        - bash <(curl -s https://codecov.io/bash) \
+          -y .codecov.yml \
+          -c \
+          -X gcov \
+          -f .coverage/coverage-final.json \
+          -F unit
 
         # calculate and upload coverage with tag "integration"
         - npm run test-integration
-        - codecov --clear --yml codecov.yml --file .coverage/coverage-final.json --flags integration
+        - bash <(curl -s https://codecov.io/bash) \
+          -y .codecov.yml \
+          -c \
+          -X gcov \
+          -f .coverage/coverage-final.json \
+          -F integration
 
 notifications:
   slack:
