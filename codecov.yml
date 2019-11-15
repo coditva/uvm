@@ -1,17 +1,24 @@
 coverage:
+  range: 75..95         # green if 95+, red if 75-
+
   status:
-    project:
+    patch:
+      # coverage status for pull request diff
       default:
-        target: auto
+        target: 100     # any patch should be 100% covered
+        threshold: 1%   # allow a little drop
+
+    project:
+      # coverage status for whole project
+      default:
+        target: auto    # use coverage of base commit as target
+        threshold: 1%   # allow a little drop
+
+      # coverage status for unit tests
       unit:
         flags: unit
         target: 80
-      integration:
-        flags: integration
-        target: 1
-    patch:
-      default:
-        target: 99
+
 parsers:
   javascript:
-    enable_partials: yes
+    enable_partials: yes    # use partial line coverage
