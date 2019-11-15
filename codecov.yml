@@ -1,5 +1,5 @@
 coverage:
-  range: 75..95         # green if 95+, red if 75-
+  range: 70..90         # green if 90+, red if 70-
 
   status:
     patch:

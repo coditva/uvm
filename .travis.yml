@@ -17,18 +17,20 @@ jobs:
         # calculate and upload coverage with tag "unit"
         - npm run test-unit
         - bash <(curl -s https://codecov.io/bash) \
-          -y .codecov.yml \
+          -y codecov.yml \
           -c \
           -X gcov \
+          -Z \
           -f .coverage/coverage-final.json \
           -F unit
 
         # calculate and upload coverage with tag "integration"
         - npm run test-integration
         - bash <(curl -s https://codecov.io/bash) \
-          -y .codecov.yml \
+          -y codecov.yml \
           -c \
           -X gcov \
+          -Z \
           -f .coverage/coverage-final.json \
           -F integration
 
